@@ -1,0 +1,42 @@
+.container {
+    /* border: 1px solid; */
+    height: 97vh;
+
+    width: 99%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* row-gap: 10px;    */
+    height: 55vh;
+    box-sizing: border-box;
+    /* justify-content: center;
+    align-items: center; */
+
+}
+
+.element {
+    border: 2px solid;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+@media screen and (min-width: 650px) {
+    .main {
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    .element {
+        /* margin: 15px 0 15px 15px; */
+    }
+}
