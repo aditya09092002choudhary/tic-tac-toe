@@ -128,11 +128,11 @@ for (i = 0; i < x.length; i++) {
         // victory
 
 function victory(a, b, c, count) {
-    var c=1;
-    if(c===1){
+    var f=1;
+    if(f===1){
     var sound = new Audio('win.mp3');
     sound.play();
-    c++;
+    f++;
     }
     document.querySelectorAll(".element")[a].style.background = "green";
     setTimeout(()=>{
