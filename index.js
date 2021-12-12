@@ -5,59 +5,24 @@ var img;
 var sound;
 var restart;
 let isgameover = false;
+var res;
 
 
-
-// function checkWin();
-
-
-// function checkWin(count){
-//     var i;
-//     for(i=0;i<count;i++){
-//         // console.log(y[2]);
-//     if(y[0]===y[1] && y[1]===y[2]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else if(y[3]===y[4]&&y[4]===y[5]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else if(y[6]===y[7]&&y[7]===y[8]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else if(y[0]===y[3]&&y[3]===y[6]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else if(y[1]===y[4]&&y[4]===y[7]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else if(y[2]===y[5]&&y[5]===y[8]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else if(y[0]===y[4]&&y[4]===y[8]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else if(y[2]===y[4]&&y[4]===y[6]){
-//         document.querySelector('.player').innerHTML = 'Game Over';
-//     }
-//     else{
-//         // document.querySelector('.player').innerHTML = 'Game Over';
-//         // continue;
-
-//     }
-// }
-
-// }
-
+// if(res !=="Restart"){
 
 for (i = 0; i < x.length; i++) {
     x[i].addEventListener('click', function () {
-        count++;
+        if(this.innerHTML===""){
+
+            count++;
+        }
         // checkWin(count);
         if (count <= 10) {
 
             img = document.createElement('img');
             if (count % 2 == 0) {
                 img.src = 'image/x.png';
+                
                 document.querySelector('.player').innerHTML = '0s Turn';
 
             }
@@ -69,10 +34,13 @@ for (i = 0; i < x.length; i++) {
             }
             img.width = 50;
             img.height = 50;
-            this.appendChild(img);
-            sound = new Audio('sound/sound.wav');
-            sound.play();
-            console.log(this.innerHTML);
+            if(this.innerHTML===""&& res!=="Restart"){
+                console.log(res);
+                this.appendChild(img);
+                sound = new Audio('sound/sound.wav');
+                sound.play();
+                // console.log(this.innerHTML);
+            }
         }
 
         if (x[0].innerHTML === x[1].innerHTML && x[1].innerHTML === x[2].innerHTML && x[1].innerHTML !== "") {
@@ -134,35 +102,50 @@ for (i = 0; i < x.length; i++) {
 
         }
 
-        var y = document.querySelectorAll('.element');
-
-
-
+        // var y = document.querySelectorAll('.element');
         restart = document.querySelector('.player').innerHTML;
 
 
         if (restart === 'Restart') {
-
+            
             document.querySelector('.player').addEventListener('click', function () {
                 location.reload();
             })
         }
+
+
+        
     })
 }
+// }
+
+
+// restart game
+
+
+
+
+        // victory
 
 function victory(a, b, c, count) {
     document.querySelectorAll(".element")[a].style.background = "green";
-    document.querySelectorAll(".element")[b].style.background = "green";
-    document.querySelectorAll(".element")[c].style.background = "green";
+    setTimeout(()=>{
+
+        document.querySelectorAll(".element")[b].style.background = "green";
+    },150);
+    setTimeout(()=>{
+        document.querySelectorAll(".element")[c].style.background = "green";
+        
+    },300);
     document.querySelector('.player').innerHTML = 'Victory';
 
     document.querySelector('.player').innerHTML = 'Restart';
+    res=document.querySelector('.player').innerHTML;
     document.querySelector('.player').style.border = '1px solid';
     document.querySelector('.player').style.background = 'black';
     document.querySelector('.player').style.color = 'white';
 
 
 }
-
 
 
