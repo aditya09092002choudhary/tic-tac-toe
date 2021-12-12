@@ -126,9 +126,9 @@ for (i = 0; i < x.length; i++) {
 
 
         // victory
-
-function victory(a, b, c, count) {
     var f=1;
+function victory(a, b, c, count) {
+    
     if(f===1){
     var sound = new Audio('win.mp3');
     sound.play();
