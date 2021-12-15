@@ -134,13 +134,13 @@ function victory(a, b, c, count) {
     sound.play();
     f++;
     }
-    document.querySelectorAll(".element")[a].style.background = "green";
+    document.querySelectorAll(".element")[a].style.background = "lightgreen";
     setTimeout(()=>{
 
-        document.querySelectorAll(".element")[b].style.background = "green";
+        document.querySelectorAll(".element")[b].style.background = "lightgreen";
     },150);
     setTimeout(()=>{
-        document.querySelectorAll(".element")[c].style.background = "green";
+        document.querySelectorAll(".element")[c].style.background = "lightgreen";
         
     },300);
     document.querySelector('.player').innerHTML = 'Victory';
