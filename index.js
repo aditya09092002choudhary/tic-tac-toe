@@ -166,7 +166,7 @@ function victory(a, b, c, count) {
                     location.reload();
                 })
             }
-        }, 2000);
+        }, 3000);
     }
     document.querySelector('.player').style.border = '1px solid';
     document.querySelector('.player').style.background = 'black';
