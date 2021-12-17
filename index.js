@@ -26,12 +26,12 @@ for (i = 0; i < x.length; i++) {
             if (count % 2 == 0) {
                 img.src = 'image/x.png';
 
-                document.querySelector('.player').innerHTML = '0s Turn';
+                document.querySelector('.player').innerHTML = '0 Turn';
 
             }
             else {
                 img.src = 'image/0.png';
-                document.querySelector('.player').innerHTML = 'Xs Turn';
+                document.querySelector('.player').innerHTML = 'X Turn';
 
 
             }
