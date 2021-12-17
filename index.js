@@ -11,7 +11,7 @@ var p2 = '<img src="image/0.png" width="50" height="50">';
 var com;
 
 
-// if(res !=="Restart"){
+
 
 for (i = 0; i < x.length; i++) {
     x[i].addEventListener('click', function () {
@@ -42,14 +42,12 @@ for (i = 0; i < x.length; i++) {
                 this.appendChild(img);
                 sound = new Audio('sound/sound.wav');
                 sound.play();
-                console.log(this.innerHTML);
+                // console.log(this.innerHTML);
             }
             if (x[0].innerHTML === x[1].innerHTML && x[1].innerHTML === x[2].innerHTML && x[1].innerHTML !== "") {
                 com = this.innerHTML;
-                console.log("Victory1");
                 victory(0, 1, 2);
                 restart = document.querySelector('.player').innerHTML;
-
             }
             else if (x[3].innerHTML === x[4].innerHTML && x[4].innerHTML === x[5].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
@@ -63,31 +61,26 @@ for (i = 0; i < x.length; i++) {
             }
             else if (x[0].innerHTML === x[4].innerHTML && x[4].innerHTML === x[8].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
-                console.log("Victory4");
                 victory(0, 4, 8);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[2].innerHTML === x[4].innerHTML && x[4].innerHTML === x[6].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
-                console.log("Victory5");
                 victory(2, 4, 6);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[0].innerHTML === x[3].innerHTML && x[3].innerHTML === x[6].innerHTML && x[3].innerHTML !== "") {
                 com = this.innerHTML;
-                console.log("Victory6");
                 victory(0, 3, 6);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[1].innerHTML === x[4].innerHTML && x[4].innerHTML === x[7].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
-                console.log("Victory7");
                 victory(1, 4, 7);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[2].innerHTML === x[5].innerHTML && x[5].innerHTML === x[8].innerHTML && x[5].innerHTML !== "") {
                 com = this.innerHTML;
-                console.log("Victory8");
                 victory(2, 5, 8);
                 restart = document.querySelector('.player').innerHTML;
             }
@@ -95,28 +88,19 @@ for (i = 0; i < x.length; i++) {
 
 
         if (count >= 10) {
-            document.querySelector('.player').innerHTML = 'Restart';
-            document.querySelector('.player').style.border = '1px solid';
-            document.querySelector('.player').style.background = 'black';
-            document.querySelector('.player').style.color = 'white';
-
-
-
+            document.querySelector('.player').style.display = 'none';
+            document.querySelector('.bottom').style.display = "block";
         }
-
-        // var y = document.querySelectorAll('.element');
-
-
-
-
     })
 }
-// }
+
 
 
 // restart game
 
-
+function restart() {
+    location.reload();
+}
 
 
 // victory
@@ -127,11 +111,11 @@ function victory(a, b, c, count) {
 
         // Play Win Sound
 
-
         var sound = new Audio('win.mp3');
         sound.play();
         f++;
-
+        document.querySelector('.restart').style.display = 'none';
+        document.querySelector('.bottom').style.display = "block";
         if (com == p1) {
             document.querySelector('.player').innerHTML = 'X Won';
             res = document.querySelector('.player').innerHTML;
@@ -161,6 +145,8 @@ function victory(a, b, c, count) {
             // Restart Game
 
             if (res === 'Restart') {
+                document.querySelector('.restart').style.display = 'none';
+                document.querySelector('.bottom').style.display = "block";
 
                 document.querySelector('.player').addEventListener('click', function () {
                     location.reload();
@@ -168,7 +154,7 @@ function victory(a, b, c, count) {
             }
         }, 3000);
     }
-    document.querySelector('.player').style.border = '1px solid';
+    document.querySelector('.player').style.border = '2px solid black';
     document.querySelector('.player').style.background = 'black';
     document.querySelector('.player').style.color = 'white';
 }
