@@ -31,6 +31,13 @@
     color: white;
 }
 
+.footer{
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 98%;
+    margin: 0 auto;
+}
 
 @media screen and (min-width: 650px) and (max-width: 800px) {
     .main {
