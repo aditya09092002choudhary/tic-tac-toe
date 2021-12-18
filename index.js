@@ -46,50 +46,58 @@ for (i = 0; i < x.length; i++) {
             }
             if (x[0].innerHTML === x[1].innerHTML && x[1].innerHTML === x[2].innerHTML && x[1].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(0, 1, 2);
+                victory(0, 1, 2, count);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[3].innerHTML === x[4].innerHTML && x[4].innerHTML === x[5].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(3, 4, 5);
+                victory(3, 4, 5, count);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[6].innerHTML === x[7].innerHTML && x[7].innerHTML === x[8].innerHTML && x[7].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(6, 7, 8);
+                victory(6, 7, 8, count);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[0].innerHTML === x[4].innerHTML && x[4].innerHTML === x[8].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(0, 4, 8);
+                victory(0, 4, 8, count);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[2].innerHTML === x[4].innerHTML && x[4].innerHTML === x[6].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(2, 4, 6);
+                victory(2, 4, 6, count);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[0].innerHTML === x[3].innerHTML && x[3].innerHTML === x[6].innerHTML && x[3].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(0, 3, 6);
+                victory(0, 3, 6, count);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[1].innerHTML === x[4].innerHTML && x[4].innerHTML === x[7].innerHTML && x[4].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(1, 4, 7);
+                victory(1, 4, 7, count);
                 restart = document.querySelector('.player').innerHTML;
             }
             else if (x[2].innerHTML === x[5].innerHTML && x[5].innerHTML === x[8].innerHTML && x[5].innerHTML !== "") {
                 com = this.innerHTML;
-                victory(2, 5, 8);
+                victory(2, 5, 8, count);
                 restart = document.querySelector('.player').innerHTML;
             }
         }
 
 
         if (count >= 10) {
-            document.querySelector('.player').style.display = 'none';
-            document.querySelector('.bottom').style.display = "block";
+
+            // if (res === "Restart") {
+            //     console.log(res);
+            //     document.querySelector('.player').style.display = 'none';
+            //     document.querySelector('.bottom').style.display = "block";
+            // }
+             if (res!==restart) {
+                document.querySelector('.player').style.display = 'none';
+                document.querySelector('.bottom').style.display = "block";
+            }
         }
     })
 }
