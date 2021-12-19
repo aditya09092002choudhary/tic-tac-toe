@@ -87,7 +87,7 @@ for (i = 0; i < x.length; i++) {
         }
 
 
-        if (count >= 10) {
+        if (count === 10) {
 
             // if (res === "Restart") {
             //     console.log(res);
