@@ -9,6 +9,7 @@ var res;
 var p1 = '<img src="image/x.png" width="50" height="50">';
 var p2 = '<img src="image/0.png" width="50" height="50">';
 var com;
+var sa;
 
 
 
@@ -86,28 +87,20 @@ for (i = 0; i < x.length; i++) {
             }
         }
 
+        if (count === 2) {
+            document.querySelector('.restart').innerHTML = "Restart";
+            document.querySelector('.restart').addEventListener('click', () => {
+                location.reload();
+            })
+        }
 
-        if (count === 10) {
-
-            // if (res === "Restart") {
-            //     console.log(res);
-            //     document.querySelector('.player').style.display = 'none';
-            //     document.querySelector('.bottom').style.display = "block";
-            // }
-             if (res!==restart) {
+        if (count >= 10) {
+            if (res !== "Restart" &&res !== "O Won"&&res !== "X Won") {
                 document.querySelector('.player').style.display = 'none';
                 document.querySelector('.bottom').style.display = "block";
             }
         }
     })
-}
-
-
-
-// restart game
-
-function restart() {
-    location.reload();
 }
 
 
