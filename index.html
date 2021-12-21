@@ -8,38 +8,46 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="image/favicon.png">
-    
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="main">
-            <div class="element" style="border-left:none ; border-top: none;"></div>
-            <div class="element" style="border-top:none ;"></div>
-            <div class="element" style="border-top:none ; border-right: none;"></div>
-            <div class="element" style="border-left:none ;"></div>
-            <div class="element" ></div>
-            <div class="element" style="border-right:none ;"></div>
-            <div class="element" style="border-left:none ; border-bottom: none;"></div>
-            <div class="element" style="border-bottom:none ;"></div>
-            <div class="element" style="border-bottom:none ; border-right: none;"></div>
+    <div class="stcontainer">
+        <div class="start">
+            <h1 class="">Let Start !</h1>
+            <div><button onclick="start()">Start</button></div>
         </div>
-        <div class="bottom">
-            <div>
-                <h1 class="restart" style="text-align:center; border: 2px solid black;">Start !</h1>
-            </div>
-            <div>
-                <h1 style="text-align: center; border: 2px solid black;" class="player">X Turn</h1>
-                
-            </div>
-            
-        </div>
-
     </div>
-     <div class="footer">
-        <div>
-            <p>  &copy; 2022 | All Rights Reserved</p>
+    <div id="mbody" >
+        <div class="container" >
+            <div class="main">
+                <div class="element" style="border-left:none ; border-top: none;"></div>
+                <div class="element" style="border-top:none ;"></div>
+                <div class="element" style="border-top:none ; border-right: none;"></div>
+                <div class="element" style="border-left:none ;"></div>
+                <div class="element"></div>
+                <div class="element" style="border-right:none ;"></div>
+                <div class="element" style="border-left:none ; border-bottom: none;"></div>
+                <div class="element" style="border-bottom:none ;"></div>
+                <div class="element" style="border-bottom:none ; border-right: none;"></div>
+            </div>
+            <div class="bottom" style="display: block;">
+                <div class="hres" style="display: none;">
+                    <h1 class="restart" style="text-align:center; border: 2px solid black;"  >Restart</h1>
+                </div>
+                <div>
+                    <h1 style="text-align: center; border: 2px solid black;" class="player">X Turn</h1>
 
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <div>
+                <p> &copy; 2022 | All Rights Reserved</p>
+
+            </div>
         </div>
     </div>
 
