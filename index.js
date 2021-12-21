@@ -11,7 +11,10 @@ var p2 = '<img src="image/0.png" width="50" height="50">';
 var com;
 var sa;
 
-
+function start(){
+    document.querySelector('.stcontainer').style.display = "none";
+    document.getElementById('mbody').style.display = "block";
+}
 
 
 for (i = 0; i < x.length; i++) {
@@ -88,7 +91,8 @@ for (i = 0; i < x.length; i++) {
         }
 
         if (count === 2) {
-            document.querySelector('.restart').innerHTML = "Restart";
+            document.querySelector('.bottom').style.display = "grid";
+            document.querySelector('.hres').style.display = "block";
             document.querySelector('.restart').addEventListener('click', () => {
                 location.reload();
             })
