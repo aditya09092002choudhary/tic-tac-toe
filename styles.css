@@ -1,3 +1,34 @@
+.stcontainer{
+    width: 97wh;
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+}
+#mbody{
+    display: none;
+}
+.start{
+    background: black;
+    color: white;
+    width: 50%;
+    /* height: 20%; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+div>button{
+    font-size: 25px;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 7px;
+    background: white;
+    color: black;
+}
 .container {
     height: 97vh;
     width: 99%;
@@ -25,13 +56,21 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
 }
 .restart{
     background: black;
     color: white;
 }
+.score{
+    font-size:20px ;
+    text-align: center;
+    background: black;
+    color: #fff;
+}
 
 .footer{
+    
     position: fixed;
     bottom: 0px;
     text-align: center;
