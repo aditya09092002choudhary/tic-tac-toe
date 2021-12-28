@@ -1,6 +1,6 @@
 .stcontainer{
     width: 97wh;
-    height: 70vh;
+    height: 96vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +54,8 @@ div>button{
 
 .bottom{
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     
 }
 .restart{
