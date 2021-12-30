@@ -109,6 +109,8 @@ for (i = 0; i < x.length; i++) {
 
         if (count == 10) {
             if (res !== "Restart" &&res !== "O Won"&&res !== "X Won") {
+                let sound = new Audio('game over.wav');
+                sound.play();
                 document.querySelector(".main").style.background = "rgb(250, 53, 53)";
                 setTimeout(()=>{
                 document.querySelector(".main").style.background = "none";
@@ -131,7 +133,7 @@ function victory(a, b, c, count) {
 
         // Play Win Sound
 
-        var sound = new Audio('win.mp3');
+       let sound = new Audio('win.mp3');
         sound.play();
         f++;
         document.querySelector('.restart').style.display = 'none';
