@@ -6,10 +6,15 @@ var sound;
 var restart;
 let isgameover = false;
 var res;
-var p1 = '<img src="image/x.png" width="50" height="50">';
-var p2 = '<img src="image/0.png" width="50" height="50">';
+// var p1 = '<img src="image/x.png" width="50" height="50">';
+var p1 = "X";
+
+// var p2 = '<img src="image/0.png" width="50" height="50">';
+var p2 = "O";
+
 var com;
 var sa;
+var innerhtml;
 
 function start(){
     document.querySelector('.stcontainer').style.display = "none";
@@ -28,13 +33,16 @@ for (i = 0; i < x.length; i++) {
 
             img = document.createElement('img');
             if (count % 2 == 0) {
-                img.src = 'image/x.png';
+                // img.src = 'image/x.png';
+                innerhtml = "X";
+
 
                 document.querySelector('.player').innerHTML = '0 Turn';
 
             }
             else {
-                img.src = 'image/0.png';
+                // img.src = 'image/0.png';
+                innerhtml = "O"
                 document.querySelector('.player').innerHTML = 'X Turn';
 
 
@@ -43,7 +51,8 @@ for (i = 0; i < x.length; i++) {
             img.height = 50;
             if (this.innerHTML === "" && res !== "Restart" && res !== "X Won" && res !== "O Won") {
                 // console.log(res);
-                this.appendChild(img);
+                // this.appendChild(img);
+                this.innerHTML = innerhtml;
                 sound = new Audio('sound/sound.wav');
                 sound.play();
                 // console.log(this.innerHTML);
@@ -98,10 +107,16 @@ for (i = 0; i < x.length; i++) {
             })
         }
 
-        if (count >= 10) {
+        if (count == 10) {
             if (res !== "Restart" &&res !== "O Won"&&res !== "X Won") {
+                document.querySelector(".main").style.background = "rgb(250, 53, 53)";
+                setTimeout(()=>{
+                document.querySelector(".main").style.background = "none";
+                    
+                },200);
                 document.querySelector('.player').style.display = 'none';
                 document.querySelector('.bottom').style.display = "block";
+                count++;
             }
         }
     })
