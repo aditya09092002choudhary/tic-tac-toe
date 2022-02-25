@@ -1,61 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="image/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css" />
+    <link rel="icon" href="image/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="stcontainer">
-        <div class="start">
-            <h1 class="">Let Start !</h1>
-            <div><button onclick="start()">Start</button></div>
-        </div>
+      <div class="start">
+        <h1 class="">Let Start !</h1>
+        <div><a href="main.html"><button>Start</button></a></div>
+      </div>
     </div>
-    <div id="mbody" >
-        <div class="container" >
-            <div class="main">
-                <div class="element" style="border-left:none ; border-top: none;"></div>
-                <div class="element" style="border-top:none ;"></div>
-                <div class="element" style="border-top:none ; border-right: none;"></div>
-                <div class="element" style="border-left:none ;"></div>
-                <div class="element"></div>
-                <div class="element" style="border-right:none ;"></div>
-                <div class="element" style="border-left:none ; border-bottom: none;"></div>
-                <div class="element" style="border-bottom:none ;"></div>
-                <div class="element" style="border-bottom:none ; border-right: none;"></div>
-            </div>
-            <div class="bottom" style="display: block;">
-                <div>
-                    <h1 style="text-align: center; border: 2px solid black;" class="player">X Turn</h1>
 
-                </div>
-                <div class="hres" style="display: none;">
-                    <h1 class="restart" style="text-align:center; border: 2px solid black;"  >Restart</h1>
-                </div>
-
-            </div>
-
-        </div>
-        
+    <div class="footer">
+      <div>
+        <p>&copy; 2022 | All Rights Reserved</p>
+      </div>
     </div>
-   <div class="footer">
-            <div>
-                <p> &copy; 2022 | All Rights Reserved</p>
-
-            </div>
-        </div>
-
-</body>
-<script src="index.js"></script>
-
+  </body>
+  <script src="/js/index.js"></script>
 </html>
