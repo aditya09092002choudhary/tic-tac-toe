@@ -1,14 +1,19 @@
 .stcontainer{
-    width: 97wh;
+    width: 100vw;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px auto;
     /* border: 1px solid; */
 }
 /* #mbody{
     display: none;
 } */
+
+.exit{
+    padding-left:30px;
+}
 .start{
     background: black;
     color: white;
@@ -29,7 +34,16 @@ div>button{
     background: white;
     color: black;
 }
+
+.btn{
+    font-size: 16px;
+    padding: 7px 15px;
+    border-radius: 10px;
+    margin-bottom:20px ;
+    background: lightgreen;
+}
 .container {
+    margin-top: 30px;
     height: 97vh;
     width: 99%;
     height: 400px;
@@ -85,7 +99,7 @@ div>button{
 
 @media screen and (min-width: 650px) and (max-width: 800px) {
     .main {
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
     }
     .bottom{
@@ -95,6 +109,9 @@ div>button{
 }
 
 @media screen and (min-width: 850px) {
+    .stcontainer{
+        width: 70vw;
+    }
     .main {
         width: 40%;
         margin: 0 auto;
