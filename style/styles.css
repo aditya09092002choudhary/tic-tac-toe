@@ -80,6 +80,7 @@ div>button{
 .restart{
     background: black;
     color: white;
+    cursor:pointer;
 }
 .score{
     font-size:20px ;
