@@ -26,22 +26,17 @@
     align-items: center;
     border-radius: 10px;
 }
-div>button{
+.btn{
     font-size: 25px;
     margin: 10px auto;
     padding: 5px;
     border-radius: 7px;
     background: white;
     color: black;
+    cursor:pointer;
 }
 
-.btn{
-    font-size: 16px;
-    padding: 7px 15px;
-    border-radius: 10px;
-    margin-bottom:20px ;
-    background: lightgreen;
-}
+
 .container {
     margin-top: 30px;
     height: 97vh;
